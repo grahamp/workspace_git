@@ -1,0 +1,45 @@
+0) Correct=> (gvp_atoi()==1)==1
+
+1) Correct=> (gvp_atoi()==2)==2
+
+2) Correct=> (gvp_atoi()==12)==12
+
+3) Correct=> (gvp_atoi()==21)==21
+
+4) Correct=> (gvp_atoi()==123)==123
+
+5) Correct=> (gvp_atoi()==12345)==12345
+
+6) Correct=> (gvp_atoi()==0)==0
+
+7) Correct=> (gvp_atoi()==10203)==10203
+
+8) Correct=> (gvp_atoi()==123456789)==123456789
+
+9) Correct=> (gvp_atoi()==-1)==-1
+
+10) Correct=> (gvp_atoi()==-123)==-123
+
+11) Correct=> (gvp_atoi()==-1742872343)==-1742872343
+
+12) Correct=> (gvp_atoi()==987654321)==987654321
+
+13) Correct=> (gvp_atoi()==65537)==65537
+
+14) Correct=> (gvp_atoi()==9999999)==9999999
+
+15) Correct=> (gvp_atoi()==-1)==-1
+
+16) ERROR! (gvp_atoi()==-1858572925) NOT equal expected errors
+
+17) ERROR! (gvp_atoi()==-727379969) NOT equal 999999999999
+
+18) ERROR! (gvp_atoi()==-276447231) NOT equal -99999999999999
+
+19) ERROR! (gvp_atoi()==54513) NOT equal abc3
+
+20) ERROR! (gvp_atoi()==-4677) NOT equal +323
+
+21) ERROR! (gvp_atoi()==-1756) NOT equal   4
+
+22) ERROR! (gvp_atoi()==0) NOT equal -
