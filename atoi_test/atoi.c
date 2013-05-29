@@ -9,11 +9,13 @@
  *      Author: grahampoor
  */
 int gvp_atoi(const char* int_as_string, int len) {
-	// Accepts only 0-9 and the '-' in the place where the most significant digit would be for a positive number.
-	// Depends on length doesn't use null terminator.
-	// Disclaimer just a quick and dirty coding exercise
+	// Accepts only 0-9 and the '-' char to indicate a negative number in the place where the most significant digit would be for a positive number.
+	// Depends on length, doesn't use null terminator.
+	// Disclaimer: just a quick and dirty coding exercise
 	// No error checking for non digits ~[0-9] or null string. No overflow underflow etc,
-	// No handling of  number formating chars like ',' '+', etc.
+	// No handling of number formating chars like ',' '+', etc.
+	// Returns valid looking results for wrong result it could detect instead of raising an error.
+	// Don't use for Civil Aviation, Medical Devices, or Weapons control.
 
 	int multiplyer = 1;
 	int result = 0; //
@@ -32,9 +34,9 @@ int gvp_atoi(const char* int_as_string, int len) {
 		result *= (-1);
 	return result;
 }
-// Rough test of coding sample get's some false negatives like for "010" would not detect some errors because it is using %d to check for a matching result.
-// Next step would be to state why the expected errors are expected and decide how to catch or that those cases are outside the functions domain. And whether the range
-// of returned values is reasonable in error and other cases (currently it is probably not because it could catch overflow errors and return an agreed error value INT_MIN or something.
+// Rough test of coding sample: Produces some false negatives like for "010,  would not detect some errors because it is using %d to check for a matching result.
+// Next step would be to determine if the expected errors are acceptable or not and decide how to catch or document them as outside the functions domain. Also we would look at whether the range
+// of returned values is reasonable in error and other cases (currently it is probably not because it could catch overflow errors and return an agreed error value INT_MIN or something.)
 int main(int arg_num, char* args[]) {
 	// Test data, tests after " expected errors" test are fail as expected.
 	const char* testNumStrings[] = { "1","2","12","21","123","12345","0","10203","123456789","-1","-123","-1742872343","987654321","65537","9999999","-1","expected errors","999999999999","-99999999999999","abc3","+323","  4","-","expected false errors follow","0001","00100",0 };
