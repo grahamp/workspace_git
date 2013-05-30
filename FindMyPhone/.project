@@ -3,7 +3,6 @@
 	<name>FindMyPhone</name>
 	<comment></comment>
 	<projects>
-		<project>PEBBLE_KIT</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

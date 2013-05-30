@@ -19,7 +19,7 @@ public class PFPhoneBroadcastReceiverOfPebbleNotifications extends
 	public static final String PEBBLE_DICTIONARY_KEY = "PEBBLE_DICTIONARY";
 
 	public PFPhoneBroadcastReceiverOfPebbleNotifications() {
-		super(PFPhone.PEBBLE_APP_UUID);
+		super(PFPhone.PFPHOME_PEBBLE_APP_UUID);
 
 		Log.i(LOG_TAG,
 				" StandAlone PFPhoneBroadcastReceiverOfPebbleNotifications(). Registered PFPhoneBroadcastReceiverOfPebbleNotifications data from Pebble");
@@ -32,7 +32,8 @@ public class PFPhoneBroadcastReceiverOfPebbleNotifications extends
 		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK
 				| Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
 		intent.putExtras(bundle);
-		intent.setAction(ACTION_LAUNCH);
+		//intent.setAction(ACTION_LAUNCH);
+	    intent.setAction(Intent.ACTION_SEND);
 		//intent.putExtra(COUNTER_RECEIVER_STARTED_INTENT, true);
 		return intent;
 	};

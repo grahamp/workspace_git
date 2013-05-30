@@ -4,5 +4,7 @@
     <string name="app_name">FindMyPhone</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Here I am! You found me!</string>
+    <string name="phone_found_button_text">Click  when found!</string>
+    <string name="phone_found_label">Stop the noise and restore original notification settings.</string>
 
 </resources>
